@@ -1,0 +1,27 @@
+<svg width="60" height="60" viewBox="120 90 60 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- Quarks (bolas pequeñas y más juntas) -->
+  <circle cx="150" cy="140" r="6" fill="#00BFFF" />
+  <circle cx="140" cy="160" r="6" fill="#32CD32" />
+  <circle cx="160" cy="160" r="6" fill="#FF4500" />
+
+  <!-- Conexiones tipo gluón -->
+  <path d="M150 140 Q145 150 140 160" stroke="#999" stroke-width="1.3" fill="none"/>
+  <path d="M150 140 Q155 150 160 160" stroke="#999" stroke-width="1.3" fill="none"/>
+  <path d="M140 160 Q150 170 160 160" stroke="#999" stroke-width="1.3" fill="none"/>
+
+  <!-- Rayos exteriores (largos) -->
+  <!-- Parte superior -->
+  <line x1="150" y1="134" x2="150" y2="98" stroke="#00BFFF" stroke-width="1"/>
+  <line x1="146" y1="137" x2="132" y2="112" stroke="#00BFFF" stroke-width="1"/>
+  <line x1="154" y1="137" x2="168" y2="112" stroke="#00BFFF" stroke-width="1"/>
+
+  <!-- Parte inferior izquierda -->
+  <line x1="134" y1="162" x2="114" y2="172" stroke="#32CD32" stroke-width="1"/>
+  <line x1="137" y1="165" x2="124" y2="184" stroke="#32CD32" stroke-width="1"/>
+
+  <!-- Parte inferior derecha -->
+  <line x1="166" y1="162" x2="186" y2="172" stroke="#FF4500" stroke-width="1"/>
+  <line x1="163" y1="165" x2="176" y2="184" stroke="#FF4500" stroke-width="1"/>
+</svg>

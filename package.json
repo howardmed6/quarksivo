@@ -1,0 +1,20 @@
+{
+  "name": "quarksivo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "api",
+    "app",
+    "web",
+    "lib"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:api": "npm run dev --workspace=api",
+    "build:web": "npm run build --workspace=web"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
