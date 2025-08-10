@@ -4,14 +4,15 @@
   "private": true,
   "workspaces": [
     "api",
-    "app",
+    "app", 
     "web",
     "lib"
   ],
   "scripts": {
     "install:all": "npm install",
-    "dev:web": "npm run dev --workspace=web",
-    "dev:api": "npm run dev --workspace=api",
+    "dev:web": "npm run start --workspace=web",
+    "dev:app": "npm run start --workspace=app",
+    "dev:api": "npm run dev --workspace=api", 
     "build:web": "npm run build --workspace=web"
   },
   "devDependencies": {
