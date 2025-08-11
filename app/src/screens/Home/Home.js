@@ -1,51 +1,52 @@
-import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
-import { styles } from './Home.styles';
+import React from 'react'; 
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'; 
+import { styles } from './Home.styles'; 
 import { TOOLS_DATA } from '../../data/tools';
+import { Logo } from '../../assets/logo';
 
-const Home = () => {
-  const organizeInRows = (tools) => {
-    const rows = [];
-    for (let i = 0; i < tools.length; i += 4) {
-      rows.push(tools.slice(i, i + 4));
-    }
-    return rows;
-  };
+const Home = () => {   
+  const organizeInRows = (tools) => {     
+    const rows = [];     
+    for (let i = 0; i < tools.length; i += 4) {       
+      rows.push(tools.slice(i, i + 4));     
+    }     
+    return rows;   
+  };    
 
-  const toolRows = organizeInRows(TOOLS_DATA);
+  const toolRows = organizeInRows(TOOLS_DATA);    
 
-  return (
+  return (     
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <View style={styles.logo}>
-          <Text style={styles.logoText}>📱</Text>
-        </View>
+      <View style={[styles.logoContainer, {backgroundColor: 'transparent'}]}>
+      <View style={[styles.logo, {backgroundColor: 'transparent'}]}>
+      <Logo width={50} height={50}/> </View>
       </View>
 
-      <ScrollView style={styles.scrollContainer}>
-        <View style={styles.toolsContainer}>
-          {toolRows.map((row, rowIndex) => (
-            <View key={rowIndex} style={styles.toolRow}>
-              {row.map((tool) => (
-                <TouchableOpacity
-                  key={tool.id}
-                  style={[styles.toolButton, { backgroundColor: tool.color }]}
-                >
-                  <Text style={styles.toolEmoji}>{tool.emoji}</Text>
-                  <Text style={styles.toolText}>{tool.name}</Text>
-                </TouchableOpacity>
-              ))}
-              {row.length < 4 &&
-                Array.from({ length: 4 - row.length }).map((_, emptyIndex) => (
-                  <View key={`empty-${emptyIndex}`} style={styles.emptySpace} />
-                ))
-              }
-            </View>
-          ))}
-        </View>
-      </ScrollView>
-    </View>
-  );
-};
+      <ScrollView style={styles.scrollContainer}>         
+        <View style={styles.toolsContainer}>           
+          {toolRows.map((row, rowIndex) => (             
+            <View key={rowIndex} style={styles.toolRow}>               
+              {row.map((tool) => (                 
+                <TouchableOpacity                   
+                  key={tool.id}                   
+                  style={[styles.toolButton, { backgroundColor: tool.color }]}                 
+                >                   
+                  <Text style={styles.toolEmoji}>{tool.emoji}</Text>                   
+                  <Text style={styles.toolText}>{tool.name}</Text>                 
+                </TouchableOpacity>               
+              ))}               
+              {row.length < 4 &&                 
+                Array.from({ length: 4 - row.length }).map((_, emptyIndex) => (                   
+                  <View key={`empty-${emptyIndex}`} style={styles.emptySpace} />                 
+                ))               
+              }             
+            </View>           
+          ))}         
+        </View>       
+      </ScrollView>     
+    </View>   
+  ); 
+
+};  
 
 export default Home;

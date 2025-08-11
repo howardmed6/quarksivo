@@ -1,9 +1,17 @@
 import React from 'react';
-import { View, StatusBar } from 'react-native';
-import Header from '../src/components/Header/Header.js';
-import Home from '../src/screens/Home/Home.js';
-import Footer from '../src/components/Footer/Footer.js';
-import { globalStyles } from './styles/globalStyles';
+import { View, StatusBar, LogBox } from 'react-native';
+import Header from './src/components/Header/Header';
+import Home from './src/screens/Home/Home';
+import Footer from './src/components/Footer/Footer';
+import { globalStyles } from './src/styles/globalStyles';
+
+// Ignorar logs molestos de versiones
+LogBox.ignoreLogs([
+  'Incompatible React versions',
+  'Cannot read property',
+  'ExceptionsManager',
+  'react-native-renderer'
+]);
 
 const App = () => {
   return (

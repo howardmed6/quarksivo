@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   logo: {
     width: 64,
-    height: 64,
+    height: 10,
     backgroundColor: COLORS.logoBackground,
     borderRadius: 12,
     alignItems: 'center',
